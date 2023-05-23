@@ -1,0 +1,135 @@
+eps.1
+# node js?
+    1. open source
+    2. cross platform
+    3. javascript runtime environment =  menyimpan semua komponen yang dibutuhkan untuk menjalankan kode dan kode javascript
+    bisa dijalankan di luar browser
+
+eps.2
+# ECMA-262 adalah spesifikasi bahasa
+# ECMAScript adalah bahasa yang mengimplementasikan ECMA-262
+# Javascript pada dasarnya adalah ECMAScript pada intinya tatapi dibuat diatas itu
+
+eps.3
+# Javascript engine adalah program yang menjalankan kode Javascript
+# 2008 , google membuat mesin javascript miliknya yaitu V8
+# V8 ditulis dalam bahasa C++ dan dapat digunakan tersendiri atau disematkan ke bahasa C++ lainnya
+# itu memungkinkan menulis program C++ kita sendiri yang bisa melakukan apa yang bisa V8 lakukan bahkan lebih
+# program C++ kita bisa menjalankan ECMAScript dan tambahan fitur lainnya untuk digabungkan ke program kita
+# sebagai contoh fitur yang berada di C++ tetapi tidak ada di javascript
+
+eps.4
+# Browser tidak bisa menjalankan kode javascript hanya dengan javascript engine saja tetapi dengan runtime javascript
+[lihat gambar chrome javascript runtime]
+
+eps.5
+# node.js open-source, cross-platform javascript runtime environment
+# node.js bukan bahasa juga bukan framework
+# dengan node.js memungkinkan menjalankan kode javascript diluar browser
+# node.js dapat mengeksekusi tidak hanya bahasa ECMAScript tapi juga fitur baru yang disediakan C++ dengan bantuan V8
+# node.js terbentuk dari fitur inti bahasa C++ dan kita bisa menggunakan fitur C++ dengan mudah dengan bantuan file javascript
+[lihat gambar node.js javascript runtime]
+
+eps.6
+# menulis kode
+# untuk menjalankan javascript dengan REPL , ketikan pada terminal $ node (kemudian enter)
+[lihat file index]
+
+eps.7
+# browser vs node.js
+    - dibrowser kita bisa berinteraksi dengan DOM , cookies
+    - sedangkan dengan node.js kita tidak mengakses DOM tapi bisa mengakses file sistem dll
+
+eps.8
+# modules
+    - modul adalah potongan kode yang dienkapsulasi dan dapat digunakan kembali dengan konteks yang berbeda
+    - di node.js setiap file diperlakukan sebagai module terpisah
+# type modules
+    - local modules : modul yang kita buat dalam aplikasi kita
+    - built-in modules : modul yang disediakan node.js
+    - Third party modules : modul yang ditulis oleh developer lain dan bisa kita gunakan untuk aplikasi kita
+
+eps.9
+# di node.js setiap file adalah module yang terisolasi secara default
+# untuk menggunakan modul tersebut kita menggunakan function require()
+# ketika file index dieksekusi , module yang di load pun akan dieksekusi juga 
+# jika file javascript kita bisa menghapus ekstensi filenya
+[lihat file index dan add]
+
+eps.10
+# module.exports digunakan untuk mengexport blok kode tertentu sehingga bisa digunakan dibanyak file
+# function yang diexport melalui module export bisa dirubah nama functionnya di file yang memuatnya
+[lihat file moduleExports, add dan index]
+
+eps.11
+# setiap module di node.js dibungkus dengan IIFE supaya scope(cakupan) nya menjadi private antar module
+[lihat gambar IIFE dan file IIFE]
+# IIFE memungkinkan kita membuat variabel dengan nama yang sama di file yang berbeda walupun di import di file yang sama
+[lihat index, batman dan superman]
+
+eps.12
+# sebelum module di eksekusi , node.js akan membungkusnya dengan function yang berisi 5 parameter
+# gunakan debug mode untuk mengetahuinya
+[lihat gambar module wrapper dan file batman] 
+
+eps.13
+# hati hati saat kita mengeksport suatu data
+# di node.js ada konsep caching atau menyimpan data
+# jika kita me load module yang sama , nodejs akan mengambil module dari cache
+[lihat file index dan file super-hero]
+
+eps.14
+# export pattern (cara cara mengeksport module)
+[lihat youtube codevolution playlist node.js eps.14]
+
+eps.15
+# module exports vs exports
+# module di nodejs, hanya mengembalikan module.exports
+# jika kita menggunakan exports.[key] untuk mengeksport itu sebenarnya disimpan ke module.exports kemudian
+  exports menyalin dengan cara object reference
+  [lihat situs ini https://javascript.info/object-copy]
+# selalu gunakan module.exports untuk menghindari kesalahan
+
+eps.16
+# ES module adalah ECMAScript standar untuk modules
+# diperkenalkan saat ES2015
+# node.js 14 keatas sudah support
+# bisa menggunakan export default atau export
+# gunakan kata import untuk mengimport module
+# ekstensi file untuk ES module adalah .mjs
+[lihat file main.mjs dan math.mjs]
+
+eps.17
+# untuk mengimport file json , gunakan ekstensi .json untuk menhindari kesalahan
+# fungsi require merubah json menjadi object
+[lihat file index]
+# di node js setiap perubahan pada file , node.js harus dijalankan ulang
+# gunakan --watch pada saat menjalankan node.js supaya masuk ke mode watch , sehingga setiap ada perubahan makan node.js akan menjalankan ulang secara otomatis
+# contoh: $ node --watch index
+
+eps.18
+# pengantar built-in modules
+[lihat youtube codevolution playlist node.js eps.18]
+
+eps.19
+[lihat file path.js atau dokumentasi node js untuk lebih jelasnya]
+
+eps.20
+# di javascript function adalah first class object
+# function bisa di teruskan sebagai argumen ke function lain
+# function bisa di kembalikan sebagai nilai dari function lainnya
+
+eps.21
+[lihat file EventEmitter.js]
+
+eps.22
+[lihat file index, pizzashop dan drinkmachine]
+
+eps.23
+# computer menyimpan dan mereprenstasikan data dalam format binary(0 dan 1)
+# 0 dan 1 disebut juga dengan bit 
+# jika data berupa angka maka akan dirubah langsung ke dalam biner 
+# jika selain angka maka akan dirubah kedalam angka yang mewakili data tersebut
+  kemudian dirubah ke biner 
+# angka yang mewakili suatu karakter disebut juga "Character code"
+#
