@@ -132,4 +132,22 @@ eps.23
 # jika selain angka maka akan dirubah kedalam angka yang mewakili data tersebut
   kemudian dirubah ke biner 
 # angka yang mewakili suatu karakter disebut juga "Character code"
-#
+# character set adalah kumpulan daftar karakter dengan yang berisi kode unik untuk setiap karakter
+# character encoding adalah bagaimana number dari setiap kode unik dari setiap karakter , yang mana nantinya
+  akan disimpan di komputer untuk nanti di 
+  (berapa banyak bit yang disimpan di komputer)
+  [https://medium.com/jspoint/introduction-to-character-encoding-3b9735f265a6]
+
+
+eps.24
+# stream adalah urutan data yang dipindahkan dari satu titik ke titik lain
+# objek Buffer digunakan untuk mewakili urutan byte dengan panjang tetap. 
+# node.js tidak bisa mengontrol kecepatan kedatangan data di stream
+  tetapi bisa memutuskan kapan mengirim data untuk di proses
+# jika dirasa sudah tepat , makan akan mengirim data ke buffer
+[lihat youtube codevolution playlist node.js eps.24 dan file index]
+
+eps.25
+# javascript itu synchronous, blocking, single thread
+# maka javascript saja tidak cukup, di sisi FE kita ada browser yang magatasi masalah diatas 
+  sedangkan di sisi BE ada node.js

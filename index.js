@@ -83,31 +83,47 @@
 /**
  * eps.23
  */
-const {Buffer} = require('node:buffer')
+// const {Buffer} = require('node:buffer')
 
-const buf1 = Buffer.alloc(10);
-const buf2 = Buffer.alloc(10,1);
-const buf3 = Buffer.allocUnsafe(10);
-const buf4 = Buffer.from([1, 2, 3]);
-const buf5 = Buffer.from([257, 257.5, -255, '1']);
-const buf6 = Buffer.from('tést');
-const buf7 = Buffer.from('tést', 'latin1');
-const buf8 = Buffer.from('hello') //utf-8 is default
-const buf9 = Buffer.from('hello', 'utf8')
-const buf10 = Buffer.from('hello', 'utf16le')
-const buf11 = Buffer.from('م','latin1')//saat akan di dekode akan error
-const buf11 = Buffer.from('م','utf8')
+// const buf1 = Buffer.alloc(10);
+// const buf2 = Buffer.alloc(10,1);
+// const buf3 = Buffer.allocUnsafe(10);
+// const buf4 = Buffer.from([1, 2, 3]);
+// const buf5 = Buffer.from([257, 257.5, -255, '1']);
+// const buf6 = Buffer.from('tést');
+// const buf7 = Buffer.from('tést', 'latin1');
+// const buf8 = Buffer.from('hello') //utf-8 is default
+// const buf9 = Buffer.from('hello', 'utf8')
+// const buf10 = Buffer.from('hello', 'utf16le')
+// const buf11 = Buffer.from('م','latin1')//saat akan di dekode akan error
+// const buf12 = Buffer.from('م','utf8')
+
+// const buf13 = Buffer.from('1ag123', 'hex');
+// // Prints <Buffer 1a>, data truncated when first non-hexadecimal value
+// // ('g') encountered.
+
+// const buf14 = Buffer.from('1a7', 'hex');
+// // Prints <Buffer 1a>, data truncated when data ends in single digit ('7').
+
+// const buf15 = Buffer.from('1634', 'hex');
+// // Prints <Buffer 16 34>, all data represented.
 
 
-console.log('(buf1)',buf1)
-console.log('(buf2)',buf2)
-console.log('(buf3)',buf3)
-console.log('(buf4)',buf4)
-console.log('(buf5)',buf5)
-console.log('(buf6)',buf6)
-console.log('(buf7)',buf7)
-console.log('(buf8)',buf8)
-console.log('(buf9)',buf9)
-console.log('(buf10)',buf10)
-console.log('(buf11)',buf11)
-console.log('(buf11)',buf11.toString())
+// console.log('(buf1)',buf1)
+// console.log('(buf2)',buf2)
+// console.log('(buf3)',buf3)
+// console.log('(buf4)',buf4)
+// console.log('(buf5)',buf5)
+// console.log('(buf6)',buf6)
+// console.log('(buf7)',buf7)
+// console.log('(buf8)',buf8)
+// console.log('(buf9)',buf9)
+// console.log('(buf10)',buf10)
+// console.log('(buf11)',buf11.toString())
+// console.log('(buf12)',buf12.toString())
+// console.log('(buf13)',buf13)
+// console.log('(buf14)',buf14)
+// console.log('(buf15)',buf15)
+// console.log('(buf13)',buf13.toString())
+// console.log('(buf14)',buf14.toString())
+// console.log('(buf15)',buf15.toString())
