@@ -151,3 +151,44 @@ eps.25
 # javascript itu synchronous, blocking, single thread
 # maka javascript saja tidak cukup, di sisi FE kita ada browser yang magatasi masalah diatas 
   sedangkan di sisi BE ada node.js
+
+eps.26
+[lihat file fs, read.txt dan write.txt]
+
+eps.27
+[lihat file fs, read.txt dan write.txt]
+
+eps.28
+# fs module merupakan salah satu module yang menggunakan stream
+[lihat file streamFS, file.txt dan file2.txt]
+
+eps.29
+[lihat file streamFS.js, file2.txt.gzip, file.txt dan file2.txt]
+
+eps.30
+# kita bisa membuat web server menggunakan nodejs
+# nodejs mampu mengakses fungsi operation system seperti networking
+# nodejs memiliki event loop untuk menjalankan task secara asynchronous
+  dan itu membuat nodejs cocok untuk menerima request dalam jumlah besar
+# server nodejs harus menggunakan format http
+# module http bisa membuat server web yang dapat mentransfer data melalui http
+
+eps.31-35
+[lihat file index]
+
+eps.36
+# framework membantu kita mengabstraksi kode, sehingga kita fokus pada persyaratan atau tujuan
+  bukan pada code itu sendiri
+# contoh framework node.js : express, nest, hapi dll
+
+eps.37
+[lihat youtube channel codevolution playlist nodejs eps.37]
+
+eps.38
+# libuv adalah library opensource lintas platform yang ditulis menggunakan bahasa Character
+# peran libuv adalah menghandle operasi asynchronous di nodejs, diantaranya menggunakan fitur thread pool dan even loop
+
+eps.39
+# thread pool , artinya tempat berkumpulnya banyak thread
+# karena pada dasarnya js adalah single thread maka kita butuh library lain untuk membantu tugas yang banyak  
+  agar program tidak terblok

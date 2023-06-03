@@ -127,3 +127,116 @@
 // console.log('(buf13)',buf13.toString())
 // console.log('(buf14)',buf14.toString())
 // console.log('(buf15)',buf15.toString())
+
+
+/**
+ * eps.31
+ */
+// const http = require('node:http')
+
+// const server =  http.createServer((req, res) => {
+//     res.writeHead(200, {
+//         'Content-Type': 'text/plain'
+//     })
+//     res.end('hello world')
+// })
+
+// server.listen(3000, () => {
+//     console.log('server running in port 3000')
+// })
+
+
+/**
+ * eps.32
+ */
+// const http = require('node:http')
+
+// const server =  http.createServer((req, res) => {
+//     const superhero = {
+//         hero1: "superman",
+//         hero2: "batman",
+//     }
+
+//     res.writeHead(200, {
+//         'Content-Type': 'application/json'
+//     })
+//     res.end(JSON.stringify(superhero))
+// })
+
+// server.listen(3000, () => {
+//     console.log('server running in port 3000')
+// })
+
+/**
+ * eps.33
+ */
+// const http = require('node:http')
+// const fs = require('node:fs')
+
+// const server =  http.createServer((req, res) => {
+//     res.writeHead(200, {
+//         'Content-Type': 'text/html'
+//     })
+
+//     fs.createReadStream(__dirname + '/index.html').pipe(res)
+
+//     // const html = fs.readFileSync('./index.html', 'utf-8')
+//     // res.end(html)
+// })
+
+/**
+ * eps.34
+ */
+// const http = require('node:http')
+// const fs = require('node:fs')
+
+// const server =  http.createServer((req, res) => {
+//     const name = 'asep'
+    
+//     res.writeHead(200, {
+//         'Content-Type': 'text/html'
+//     })
+
+//     let html = fs.readFileSync('./index.html', 'utf-8')
+//     html = html.replace('{{name}}', name)
+//     res.end(html)
+// })
+
+// server.listen(3000, () => {
+//     console.log('server running in port 3000')
+// })
+
+/**
+ * eps.35
+ */
+const http = require('node:http')
+const fs = require('node:fs')
+
+const server =  http.createServer((req, res) => {
+    if(req.url === '/'){
+        res.writeHead(200, {
+            'Content-Type' : 'text/plain'
+        })
+        res.end('home page')
+    } else if(req.url === '/about'){
+        res.writeHead(200, {
+            'Content-Type' : 'text/plain'
+        })
+        res.end('about page')
+    } else if(req.url === '/api'){
+        res.writeHead(200, {
+            'Content-Type' : 'application/json'
+        })
+        res.end(JSON.stringify({
+            'name': 'asep',
+            'age': 28
+        }))
+    } else {
+        res.writeHead(404)
+        res.end('page not found')
+    }
+})
+
+server.listen(3000, () => {
+    console.log('server running in port 3000')
+})
