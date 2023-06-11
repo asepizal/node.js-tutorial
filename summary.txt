@@ -185,10 +185,46 @@ eps.37
 [lihat youtube channel codevolution playlist nodejs eps.37]
 
 eps.38
-# libuv adalah library opensource lintas platform yang ditulis menggunakan bahasa Character
+# libuv adalah library opensource lintas platform yang ditulis menggunakan bahasa C
 # peran libuv adalah menghandle operasi asynchronous di nodejs, diantaranya menggunakan fitur thread pool dan even loop
 
 eps.39
 # thread pool , artinya tempat berkumpulnya banyak thread
 # karena pada dasarnya js adalah single thread maka kita butuh library lain untuk membantu tugas yang banyak  
   agar program tidak terblok
+
+eps.40
+[lihat file threadpool]
+
+eps.41
+# tidak semua methods asynchronous menggunakan threadpool
+# ada 2 cara menghandle asynchronous
+1. native async mechanism   2. thread pool
+# mekanisme setiap OS berbeda
+  - epoll (Linux)
+  - kqueue (Mac OS)
+  - I/O completion port (windows)
+# jika thread di threadpool sibuk maka ini pun merupakan hambatan
+
+eps.42
+# secara teknis eventloop adalah program C dan bagian dari libuv
+# eventloop adalah sebuah pola yang mengatur dan menkoordinasikan kode synchronous dan asynchronous di nodejs
+# urutan eksekusi :
+1. kode synchronous dijalankan lebih dulu dibandin asynchronous
+2. setelah call stack kosong , maka event loop akan dijalankan
+3. callback apapun yang ada di microtask queue akan di proses , pertama di nextTick queue kemudian promise queue
+4. seteleh microtask kemudian semua callback yang ada di timer queue
+5. masuk ke microtask jika saat menjalankan di timer queue ada callback microtask
+6. semua callback di I/O queue di eksekusi
+7. masuk ke microtask jika saat menjalankan di I/O queue ada callback microtask
+8. semua callback di check queue di eksekusi
+9. masuk ke microtask jika saat menjalankan di check queue ada callback microtask
+10. semua callback di close queue di eksekusi
+11. masuk ke microtask jika saat menjalankan di close queue ada callback microtask
+[lihat gambar event loop]
+
+eps. 43
+[lihat file microtask]
+
+eps. 44
+[lihat file timer queue]
