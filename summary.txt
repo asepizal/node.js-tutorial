@@ -228,3 +228,19 @@ eps. 43
 
 eps. 44
 [lihat file timer queue]
+
+eps.45-46
+[lihat file i-oQueue]
+
+eps.47
+[lihat file checkQueue]
+
+eps.48
+[lihat youtube codevolutin eps.48]
+
+eps.50-57
+[lihat youtube dan folder coba package , dan referensi lainnya]
+
+eps.58
+# cara cepat menggunakan CLI buatan sendiri tanpa mempublish , dengan cara
+$ npm install -g

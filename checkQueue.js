@@ -26,7 +26,7 @@
 // setImmediate(() => console.log('setImmidiate3'))
 
 /**
- * jika ada microtask saat menjalankan microtask maka akan menjalankan microtask terlebih dahulu
+ * jika ada microtask saat eksekusi check queue, maka akan menjalankan microtask terlebih dahulu
  */
 
 // case 3
